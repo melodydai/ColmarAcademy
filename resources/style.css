@@ -19,7 +19,7 @@ h1 {
   font-family: 'Permanent Marker', serif;
   font-weight: bold;
   color: #C72C41;
-  font-size: 55px;
+  font-size: 50px;
   line-height: 1.4;
   text-shadow: 2px 1px 2px grey;
 }
@@ -111,7 +111,7 @@ li:hover {
   font-weight: 700;
 }
 
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 768px) {
   nav {
     padding-left: 0;
     padding-right: 0;
@@ -154,14 +154,12 @@ li:hover {
 /* mainbanner */
 .mainbanner {
   display: flex;
-  justify-content: space-around;
   padding: 32px 24px;
   background-color: #eeeeee;
 }
 
 .mainbanner .imagecontainer {
   width: 60%;
-  height: auto;
 }
 
 img {
@@ -175,6 +173,7 @@ img {
   flex-direction: column;
   justify-content: center;
   padding-left: 24px;
+  width: 36%;
 }
 
 .intro {
@@ -197,7 +196,7 @@ img {
   background-color: #a52335;
 }
 
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 768px) {
   .mainbanner {
     padding: 0;
     flex-direction: column;
@@ -211,6 +210,7 @@ img {
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100%;
   }
   h1 {
     font-size: 38px;
@@ -288,7 +288,7 @@ img {
   transition: all 0.65s;
 }
 
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 768px) {
   .news {
     width: 100%;
     margin-top: -32px;
@@ -373,7 +373,7 @@ img {
   width: auto;
 }
 
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 768px) {
   .line1, .line2 {
     display: flex;
     flex-direction: column;
@@ -410,7 +410,7 @@ video {
   padding: 24px 0px 8px 0px;
 }
 
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 768px) {
   .subtitle {
     padding-bottom: 16px;
   }
@@ -429,7 +429,7 @@ footer {
   border-top: 1px solid lightgrey;
 }
 
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 768px) {
   footer {
     padding-bottom: 16px;
   }
