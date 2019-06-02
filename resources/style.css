@@ -8,6 +8,7 @@ html, body {
   width:100%;
   color: #454d66;
   font-family: 'Quicksand', sans-serif;
+  font-size: 20px;
 }
 
 a {
@@ -15,11 +16,12 @@ a {
 }
 
 h1 {
-  font-family: 'Lobster', serif;
+  font-family: 'Pacifico', serif;
   font-weight: bold;
   color: #C72C41;
   font-size: 55px;
   line-height: 1.4;
+  text-shadow: 2px 1px 2px grey;
 }
 
 h2 {
@@ -30,6 +32,8 @@ h2 {
 
 h3 {
   color: #F8B739;
+  font-weight: bold;
+  font-size: 20px;
 }
 
 @font-face {
@@ -42,11 +46,11 @@ h3 {
 }
 
 @font-face {
-  font-family: 'Lobster';
+  font-family: 'Pacifico';
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: local('Lobster Regular'), local('Lobster-Regular'), url(https://fonts.gstatic.com/s/lobster/v21/neILzCirqoswsqX9zoKmM4MwWJU.woff2) format('woff2');
+  src: local('Pacifico Regular'), local('Pacifico-Regular'), url(https://fonts.gstatic.com/s/pacifico/v13/FwZY7-Qmy14u9lezJ-6H6MmBp0u-.woff2) format('woff2');
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
@@ -91,6 +95,10 @@ ul {
 
 li {
   padding-right: 16px;
+}
+
+li:hover {
+  font-weight: 700;
 }
 
 /* nav mobile view */
@@ -177,6 +185,35 @@ img {
   font-size: 20px;
 }
 
+.button:hover {
+  background-color: #a52335;
+}
+
+@media only screen and (max-width: 600px) {
+  .mainbanner {
+    padding: 0;
+    flex-direction: column;
+  }
+  .mainbanner .imagecontainer {
+    width: auto;
+    height: auto;
+  }
+  .maintitle {
+    padding: 32px 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  h1 {
+    font-size: 38px;
+    padding-bottom: 12px;
+  }
+  .button {
+    margin-top: 4px;
+    width: 100%;
+  }
+}
+
 /* news */
 .news {
   display: flex;
@@ -213,7 +250,6 @@ img {
 .info {
   display: flex;
   padding: 16px;
-
 }
 
 .info .imagecontainer {
@@ -230,15 +266,57 @@ img {
   padding: 0 0 0 16px;
 }
 
+.mobile {
+  display: none;
+}
+
 .infocontainer * {
   margin: 4px 0;
 }
 
-h3 {
-  font-weight: bold;
-  font-size: 18px;
+.info:hover {
+  background-color: #eeeeee;
+  font-weight: 700;
+  transition: all 0.65s;
 }
 
+@media only screen and (max-width: 600px) {
+  .news {
+    width: 100%;
+    margin-top: -32px;
+  }
+
+  .news .left {
+    display: none;
+  }
+
+  .news .right {
+    width: 100%;
+    padding: 16px 16px 32px 16px;
+  }
+
+  .normal {
+    display: none;
+  }
+
+  .mobile {
+    display: block;
+  }
+
+  .info .imagecontainer, .infocontainer {
+    width: 100%;
+    height: auto;
+  }
+
+  .info {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    margin-top: 32px;
+    /* I don't think it looks good with 64px margin, so I changed it to 32px. */
+  }
+
+}
 
 /* Start learning */
 .learning {
@@ -256,7 +334,7 @@ h3 {
 }
 
 .learning .subtitle {
-  padding-bottom: 32px;
+  padding-bottom: 16px;
 }
 
 .courses {
@@ -270,14 +348,46 @@ h3 {
 }
 
 .course {
-  margin: 0 16px 16px 16px;
+  margin: 16px;
   background-color: white;
   width: 30%;
+  display: flex;
+  flex-direction: column;
+}
+
+.course:hover {
+  box-shadow: 2px 3px 6px grey;
+  transition: all 0.6s;
 }
 
 .course .infocontainer {
-  width: 87%;
   padding: 16px 16px 24px 16px;
+  width: auto;
+}
+
+@media only screen and (max-width: 600px) {
+  .line1, .line2 {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .learning {
+    padding: 0 16px;
+  }
+
+  .course {
+    width: auto;
+    margin: 0px 16px 8px 16px;
+  }
+
+  .courses {
+    padding: 0 16px 24px 16px;
+    width: 100%;
+    margin: 0;
+  }
+
+
+
 }
 
 /* Thesis */
