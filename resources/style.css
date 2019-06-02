@@ -1,17 +1,33 @@
+* {
+  margin:0;
+  padding:0;
+}
+
+html, body {
+  height:100%;
+  width:100%;
+}
+
 /* navbar */
 
 nav {
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+  background-color: white;
+}
+
+.nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-left: 24px;
-  padding-right: 8px;
   height: 64px;
 }
 
 .title {
   display: flex;
   align-items: center;
+  padding-left: 24px;
 }
 
 .bold {
@@ -22,14 +38,20 @@ nav {
   display: none;
 }
 
+.navbar {
+  padding-right: 8px;
+}
+
 ul {
   display: flex;
   justify-content: space-between;
 }
 
 li {
-  margin-right: 16px;
+  padding-right: 16px;
 }
+
+/* nav mobile view */
 
 @media only screen and (max-width: 600px) {
   nav {
@@ -46,10 +68,13 @@ li {
     align-items: center;
     justify-content: space-around;
     width: 100%;
+    height: auto;
   }
 
-  #logo2, #logo3, #logo4 {
-    display: inline;
+  #logo1, #logo2, #logo3, #logo4 {
+    display: inline-block;
+    height: 35px;
+    width: auto;
   }
 
   ul {
@@ -59,4 +84,157 @@ li {
   .title span {
     display: none;
   }
+}
+
+/* mainbody */
+.main {
+  position: relative;
+  top: 64px;
+  margin: 0;
+}
+
+/* mainbanner */
+.mainbanner {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  padding: 32px 24px;
+  background-color: #b5cfe7;
+}
+
+.mainbanner .imagecontainer {
+  width: 60%;
+  height: auto;
+}
+
+img {
+  object-fit: cover;
+  width: 100%;
+  height: auto;
+}
+
+.maintitle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 24px;
+}
+
+h1 {
+  font-weight: bold;
+  color: black;
+  font-size: 35px;
+}
+
+.intro {
+  padding: 20px 0;
+  color: #3c6686;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #3c6686;
+  width: 80%;
+  height: auto;
+  color: white;
+  padding: 8px 0px;
+}
+
+/* news */
+.news {
+  display: flex;
+}
+
+.leftnews {
+  padding: 32px 24px;
+  width: 60%;
+}
+
+.leftnews .imagecontainer {
+  margin: 0;
+  width: 100%;
+}
+
+.leftnews h2 {
+  padding: 32px 0 24px 0;
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+#signature {
+  font-weight: bold;
+  padding: 16px 0 0 0;
+}
+
+.rightnews {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.info {
+  display: flex;
+  padding: 16px;
+
+}
+
+.info .imagecontainer {
+  width: 35%;
+  height: auto;
+}
+
+.infocontainer {
+  width: 65%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 0 0 16px;
+}
+
+.infocontainer * {
+  margin: 4px 0;
+}
+
+.infocontainer h3 {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+
+/* Start learning */
+.learning {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #b5cfe7;
+}
+
+.start {
+  padding: 32px 0;
+}
+
+.courses {
+  padding: 0 72px 32px 72px;
+}
+
+.line1, .line2 {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 -16px;
+}
+
+.course {
+  margin: 0 16px 16px 16px;
+  background-color: white;
+  width: 30%;
+}
+
+.course .infocontainer {
+  width: 87%;
+  padding: 16px 16px 24px 16px;
 }
