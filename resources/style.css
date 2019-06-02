@@ -16,7 +16,7 @@ a {
 }
 
 h1 {
-  font-family: 'Pacifico', serif;
+  font-family: 'Permanent Marker', serif;
   font-weight: bold;
   color: #C72C41;
   font-size: 55px;
@@ -28,6 +28,7 @@ h2 {
   color: #C04537;
   font-size: 30px;
   font-weight: bold;
+  font-family: 'Changa','Quicksand',serif;
 }
 
 h3 {
@@ -46,11 +47,20 @@ h3 {
 }
 
 @font-face {
-  font-family: 'Pacifico';
+  font-family: 'Permanent Marker';
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: local('Pacifico Regular'), local('Pacifico-Regular'), url(https://fonts.gstatic.com/s/pacifico/v13/FwZY7-Qmy14u9lezJ-6H6MmBp0u-.woff2) format('woff2');
+  src: local('Permanent Marker Regular'), local('PermanentMarker-Regular'), url(https://fonts.gstatic.com/s/permanentmarker/v8/Fh4uPib9Iyv2ucM6pGQMWimMp004La2Cf5b6jlg.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Changa';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Changa'), local('Changa-Regular'), url(https://fonts.gstatic.com/s/changa/v6/2-cm9JNi2YuVOUckZpy-eOz1pQ.woff2) format('woff2');
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
@@ -101,9 +111,7 @@ li:hover {
   font-weight: 700;
 }
 
-/* nav mobile view */
-
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 480px) {
   nav {
     padding-left: 0;
     padding-right: 0;
@@ -189,7 +197,7 @@ img {
   background-color: #a52335;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 480px) {
   .mainbanner {
     padding: 0;
     flex-direction: column;
@@ -280,7 +288,7 @@ img {
   transition: all 0.65s;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 480px) {
   .news {
     width: 100%;
     margin-top: -32px;
@@ -356,7 +364,7 @@ img {
 }
 
 .course:hover {
-  box-shadow: 2px 3px 6px grey;
+  box-shadow: 3px 3px 6px grey;
   transition: all 0.6s;
 }
 
@@ -365,7 +373,7 @@ img {
   width: auto;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 480px) {
   .line1, .line2 {
     display: flex;
     flex-direction: column;
@@ -385,9 +393,6 @@ img {
     width: 100%;
     margin: 0;
   }
-
-
-
 }
 
 /* Thesis */
@@ -405,10 +410,27 @@ video {
   padding: 24px 0px 8px 0px;
 }
 
+@media only screen and (max-width: 480px) {
+  .subtitle {
+    padding-bottom: 16px;
+  }
+
+  .theses .left {
+    width: 100%;
+    padding: 0 0 24px 0;
+  }
+}
+
 /* footer */
 footer {
   display: flex;
   padding: 16px 24px 24px 24px;
   justify-content: space-between;
   border-top: 1px solid lightgrey;
+}
+
+@media only screen and (max-width: 480px) {
+  footer {
+    padding-bottom: 16px;
+  }
 }
