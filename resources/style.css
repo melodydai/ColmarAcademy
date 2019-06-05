@@ -110,11 +110,11 @@ li {
   padding-right: 16px;
 }
 
-li:hover {
+li:hover, a:hover {
   font-weight: 700;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 480px) {
   nav {
     padding-left: 0;
     padding-right: 0;
@@ -197,9 +197,10 @@ img {
 
 .button:hover {
   background-color: #a52335;
+  transition: 0.5s;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 480px) {
   .mainbanner {
     padding: 0;
     flex-direction: column;
@@ -285,13 +286,12 @@ img {
   margin: 4px 0;
 }
 
-.info:hover {
+.info:hover, .left:hover {
   background-color: #eeeeee;
-  font-weight: 700;
   transition: all 0.65s;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 480px) {
   .news {
     width: 100%;
     margin-top: -32px;
@@ -376,7 +376,7 @@ img {
   width: auto;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 480px) {
   .line1, .line2 {
     display: flex;
     flex-direction: column;
@@ -413,7 +413,7 @@ video {
   padding: 24px 0px 8px 0px;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 480px) {
   .subtitle {
     padding-bottom: 16px;
   }
@@ -432,7 +432,7 @@ footer {
   border-top: 1px solid lightgrey;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 480px) {
   footer {
     padding-bottom: 16px;
   }
