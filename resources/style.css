@@ -110,6 +110,10 @@ li {
   padding-right: 16px;
 }
 
+li a {
+  text-decoration:none;
+}
+
 li:hover, a:hover {
   font-weight: 700;
 }
